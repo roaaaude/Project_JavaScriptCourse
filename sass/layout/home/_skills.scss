@@ -1,0 +1,45 @@
+#skills {
+    width: $vpWidth;
+    position: relative;
+    top: 0px;
+    @include flex(flex, center, space-around);
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 20px wheat;
+    background: rgb(17, 22, 23);
+
+    & img {
+        height: 6vh;
+    }
+}
+
+
+#bicycle-man1 {
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: auto;
+    animation: bicycle1 20s linear infinite;
+    transition: all 5s ease-in-out;
+    z-index: 1;
+}
+
+
+/* 
+    moving bicycle from left to right
+*/
+
+@keyframes bicycle1 {
+    0% {
+        right: 100%;
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 0;
+    }
+
+    100% {
+        bottom: 0;
+        right: -100px;
+    }
+}

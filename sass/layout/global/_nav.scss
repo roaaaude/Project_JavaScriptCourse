@@ -1,0 +1,35 @@
+.navo {
+	width: 100%;
+	background: #ffffffd5;
+
+	.navbar-toggler {
+		height: 60px;
+		margin-left: 10px;
+	}
+}
+
+
+
+.links-settings {
+	color: #d70683;
+	font-size: 1.2em;
+	margin-left: 30px;
+
+	&:hover {
+		color: aliceblue;
+		text-shadow: 1px 1px 70px rgb(255, 255, 255);
+		transition: filter 3s ease-in-out;
+	}
+}
+
+div.profile-picture-box {
+	margin: auto 10px auto 0;
+	width: 50px;
+	height: auto;
+
+	a {
+		img {
+			cursor: url('../../../img/HandPointer.png') 0 0,default
+		}
+	}
+}

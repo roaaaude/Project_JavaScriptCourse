@@ -1,0 +1,30 @@
+.button {
+	border: none;
+	color: #aaaaaa;
+	padding: 0.7em 1.7em;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-radius: 0.5em;
+    border: 1px solid #0000004e;
+	background: linear-gradient(225deg, #000000, #000000, rgb(85, 85, 85));
+	text-shadow: -20px 15px 2px rgba(255, 255, 255, 0.217);
+	transform:skewX(10deg);
+	margin: 100px;
+	transition: all 0.5s ease-in-out;
+	cursor: url(../../img/HandPointer.png) 0 0, default;
+}
+
+.button:hover {
+    color: aliceblue;
+	text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.312);
+	background: #1f1d1d;
+	box-shadow: -5px 5px 12px rgb(160, 202, 248), 0px 0px 30px rgb(160, 202, 248);
+	transform: rotate(0deg) scale(1.06);
+
+	transition: all 0.3s ease-in-out;
+}
+
+.button:active {
+	box-shadow:inset 0px 5px 12px rgb(255, 255, 255), 0px -2px 3px rgb(255, 255, 255) inset;
+	transform: scale(0.9);
+}
