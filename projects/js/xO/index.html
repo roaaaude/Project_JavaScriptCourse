@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>X-O-Game</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+            defer></script>
+            <link rel="stylesheet" href="./style.css">
+            <link rel="shortcut icon" href="./images/tic-tac-toe-svgrepo-com.svg" type="image/x-icon">
+</head>
+
+
+<body>
+<div class="container-fluid container-lg bg-black text-center ">
+
+    <div class="border">
+
+
+
+        <div class="card bg-black w-100">
+            <div class="row bg-dark-subtle sticky-top result border border-black">
+
+                <div class="row m-auto">
+                    <div class="col-4 m-auto fs-4 text-primary fw-bold" id="player-X"></div>
+                    <div class="col-4 m-auto"><img class="img-fluid" src="./images/tic-tac-toe-svgrepo-com.svg" alt=""></div>
+                    <div class="col-4 m-auto fs-4 text-danger fw-bold" id="player-O"></div>
+                </div>
+
+
+
+                <div class="row m-auto ">
+                    <div class="col-4 text-primary fs-4 fw-bold" id="result-left">0</div>
+                    <div class="col-4  fs-6  fw-bold" id="result-center">0</div>
+                    <div class="col-4 text-danger text-center fs-4 fw-bold" id="result-right">0</div>
+                    <div class="col-12 fs-1 text-success fw-bold" id="turn">X</div>
+                </div>
+            </div>
+
+
+            <!-- A, D, G -->
+            <div class="row mt-1 m-auto">
+
+                <!--  game  A    -->
+                <div class="col-4 bg-dark" id="a">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="a1" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 m-auto my-1">
+                            <div class="cell" id="a2" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 m-auto my-1">
+                            <div class="cell" id="a3" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 my-1 ">
+                            <div class="cell" id="a4" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="a5" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1 ">
+                            <div class="cell" id="a6" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="a7" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="a8" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="a9" class=" " onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--     game  D    -->
+                <div class="col-4  bg-dark" id="d">
+
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="d1" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="d2" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="d3" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="d4" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="d5" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1 ">
+                            <div class="cell" id="d6" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="d7" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1 ">
+                            <div class="cell" id="d8" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="d9" class=" " onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--     game  G    -->
+                <div class="col-4  bg-dark" id="g">
+
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="g1" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1 ">
+                            <div class="cell" id="g2" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="g3" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="g4" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="g5" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="g6" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="g7" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="g8" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="g9" class=" " onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- D, E, F -->
+            <div class="row m-auto">
+
+                <!--     game  B    -->
+                <div class="col-4 bg-dark " id="b">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="b1" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="b2" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="b3" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="b4" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="b5" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="b6" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="b7" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="b8" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="b9" class=" " onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--     game  E    -->
+                <div class="col-4 bg-dark " id="e">
+
+                    <div class="row  d-flex justify-content-between">
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="e1" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="e2" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="e3" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1 ">
+                            <div class="cell" id="e4" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="e5" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="e6" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="e7" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="e8" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="e9" class=" " onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--     game  H    -->
+                <div class="col-4 bg-dark " id="h">
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="h1" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="h2" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="h3" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="h4" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="h5" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="h6" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="h7" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="h8" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="h9" class=" " onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+
+
+            <!-- C, H, I -->
+            <div class="row m-auto">
+
+                <!--     game  C    -->
+                <div class="col-4 bg-dark " id="c">
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="c1" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="c2" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="c3" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="c4" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="c5" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="c6" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="c7" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="c8" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="c9" class=" " onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--     game  F    -->
+                <div class="col-4 bg-dark " id="f">
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="f1" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="f2" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="f3" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="f4" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="f5" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="f6" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="f7" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="f8" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="f9" class=" " onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--     game  I    -->
+                <div class="col-4 bg-dark" id="i">
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="i1" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="i2" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+
+                        <div class="col-4 my-1">
+                            <div class="cell" id="i3" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="i4" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="i5" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="i6" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row  d-flex justify-content-between">
+                        <div class="col-4 my-1">
+                            <div class="cell" id="i7" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="i8" onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="cell" id="i9" class=" " onclick="insert_X_Y(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+         </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<div class="row w-75 my-5 m-auto ">
+    <div class="col-md-6 m-auto">
+        <button id="restartButton" type="reset" class="btn btn-outline-primary w-100"
+            onclick="resetGame()">Reset</button>
+    </div>
+</div>
+
+
+</div>
+<script src="./javaScript.js"></script>
+</body>
+
+</html>
